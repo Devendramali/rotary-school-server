@@ -34,7 +34,10 @@ const feeRoutes = require("./routes/feeRoutes");
 const facultyRoutes = require("./routes/facultyRoutes");
 const achievementRoutes = require("./routes/achievementRoutes");
 const ptaRoutes = require("./routes/ptaRoutes");
-
+const notificationRoutes = require("./routes/notificationRoutes");
+const notificationCategoryRoutes = require("./routes/notificationCategoryRoutes");
+const managementCommitteeRoutes = require("./routes/managementCommitteeRoutes");
+const videoRoutes = require("./routes/videoRoutes");
 
 const app = express();
 
@@ -129,7 +132,11 @@ app.use("/api/faculty", facultyRoutes);
 app.use("/api/achievements", achievementRoutes);
 app.use("/api/pta", ptaRoutes);
 
+app.use("/api/notifications", notificationRoutes);
+app.use("/api/notification-categories", notificationCategoryRoutes);
 
+app.use("/api/management-committee", managementCommitteeRoutes);
+app.use("/api/video", videoRoutes);
 
 // Root route
 app.get("/", (req, res) => {
